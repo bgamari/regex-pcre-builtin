@@ -78,14 +78,22 @@ import Foreign(unsafePerformIO
               ,alloca,allocaBytes,nullPtr
               ,peek,peekElemOff
               ,newForeignPtr,withForeignPtr)
+#if __GLASGOW_HASKELL__ >= 706
+import Foreign.C(CInt(..),CChar)
+#else
 import Foreign.C(CInt,CChar)
+#endif
 import Foreign.C.String(CString,CStringLen,peekCString)
 import Text.Regex.Base.RegexLike(RegexOptions(..),RegexMaker(..),RegexContext(..),MatchArray,MatchOffset)
 #else
 import Data.Array(Array)
 import Data.Bits(Bits)
 import Foreign(ForeignPtr)
+#if __GLASGOW_HASKELL__ >= 706
+import Foreign.C(CInt(..))
+#else
 import Foreign.C(CInt)
+#endif
 import Foreign.C.String(CString,CStringLen)
 import Text.Regex.Base.RegexLike(RegexOptions(..),RegexMaker(..),RegexContext(..),MatchArray,MatchOffset)
 #endif
