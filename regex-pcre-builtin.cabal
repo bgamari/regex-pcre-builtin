@@ -30,7 +30,7 @@ Extra-source-files:
 
 library
     Build-Depends: base >= 3.0, regex-base >= 0.93, array, containers, bytestring
-    Extensions:    MultiParamTypeClasses, FunctionalDependencies, CPP, ForeignFunctionInterface, PatternSignatures, GeneralizedNewtypeDeriving, FlexibleContexts, TypeSynonymInstances, FlexibleInstances
+    Extensions:    MultiParamTypeClasses, FunctionalDependencies, CPP, ForeignFunctionInterface, ScopedTypeVariables, GeneralizedNewtypeDeriving, FlexibleContexts, TypeSynonymInstances, FlexibleInstances
 
   -- Data-Files:
   -- Extra-Source-Files:
